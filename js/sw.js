@@ -1,10 +1,10 @@
-const CACHE_NAME = 'habit-tracker-v1';
+const CACHE_NAME = 'habit-tracker-v2';
 const ASSETS = [
-    './',
-    './index.html',
-    './css/style.css',
-    './js/app.js',
-    './manifest.json'
+    '/habit-tracker/',
+    '/habit-tracker/index.html',
+    '/habit-tracker/css/style.css',
+    '/habit-tracker/js/app.js',
+    '/habit-tracker/manifest.json'
 ];
 
 // Install event - cache assets
