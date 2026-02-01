@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="description" content="Track your daily habits with this simple PWA">
+    <title>Habit Tracker</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>Habit Tracker</h1>
+            <button class="btn btn-primary" id="addHabitBtn">+ Add Habit</button>
+        </header>
+
+        <main class="main">
+            <div class="table-container">
+                <table class="tracking-table" id="trackingTable">
+                    <thead id="tableHead">
+                        <!-- Habit headers will be inserted here -->
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Date rows with checkboxes will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+            <p class="empty-state" id="emptyState">No habits yet. Add your first habit to start tracking!</p>
+        </main>
+    </div>
+
+    <!-- Add/Edit Habit Modal -->
+    <div class="modal-overlay" id="habitModal">
+        <div class="modal">
+            <h2 id="modalTitle">Add New Habit</h2>
+            <input type="text" id="habitInput" class="input" placeholder="Enter habit name" maxlength="30">
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                <button class="btn btn-danger" id="deleteBtn" style="display: none;">Delete</button>
+                <button class="btn btn-primary" id="saveBtn">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirm Delete Modal -->
+    <div class="modal-overlay" id="confirmModal">
+        <div class="modal">
+            <h2>Delete Habit?</h2>
+            <p>This will delete the habit and all its tracking data. This cannot be undone.</p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="confirmCancelBtn">Cancel</button>
+                <button class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
