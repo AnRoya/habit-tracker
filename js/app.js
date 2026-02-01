@@ -334,7 +334,7 @@ function setupEventListeners() {
 // Register Service Worker
 function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('js/sw.js')
+        navigator.serviceWorker.register('./js/sw.js')
             .then(reg => console.log('Service Worker registered'))
             .catch(err => console.log('Service Worker registration failed:', err));
     }
